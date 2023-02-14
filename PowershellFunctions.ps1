@@ -45,3 +45,15 @@ function Write-GitHub {
         Write-Verbose -Message "Git is not installed"
     } 
 }
+
+function Get-Weather {
+    [CmdletBinding()]
+    param (
+    )
+    if ($args -eq $null) {
+        (Invoke-WebRequest "wttr.in/?m").Content
+    }
+    else {
+        (Invoke-WebRequest "wttr.in/${args}?m").Content
+    }
+}
