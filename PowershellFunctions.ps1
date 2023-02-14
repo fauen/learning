@@ -2,7 +2,7 @@ function Update-GitHub {
     [CmdletBinding()]
     param (
     )
-    if (Get-Command "git" -eq $true) {
+    if (Get-Command -Name git -CommandType Application) {
         git pull
     }
     else {
