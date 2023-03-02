@@ -1,3 +1,7 @@
+# To get an API key you must first create an account at https://trafiklab.se.
+# After that, create a project and add "SL Realtidsinformation 4" to it.
+# You should now be able to get your own API key to use this script.
+
 if (-not (Test-Path $env:HOMEPATH\.sltoken)) {
     Read-Host "Input API key" -MaskInput | Out-File -FilePath $env:HOMEPATH\.sltoken
     (Get-Item $env:HOMEPATH\.sltoken).Attributes += 'Hidden'
