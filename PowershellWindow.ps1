@@ -1,3 +1,6 @@
+# This is the tutorial from JackedProgrammer on YouTube.
+# Video link: https://youtu.be/X6nU5QCF8XI
+
 Add-Type -AssemblyName System.Windows.Forms
 
 $FormObject = [System.Windows.Forms.Form]
